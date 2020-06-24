@@ -3,39 +3,39 @@
     <div class="block-slider block-slider4">
         <ul class="" id="bxslider-home4">
             <li>
-                <img src="res/site/img/h4-slide.png" alt="Slide">
-                <div class="caption-group">
+                <img src="res/site/img/s4-slide.jpg" alt="Slide">
+                <div class="caption-group"><br>
                     <h2 class="caption title">
-                        iPhone <span class="primary">6 <strong>Plus</strong></span>
+                        Kit SOS cachos <span class="primary">Kit<strong>SOS</strong></span>
                     </h2>
-                    <h4 class="caption subtitle">Dual SIM</h4>
+                    <h4 class="caption subtitle">Cachos</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide2.png" alt="Slide">
+            <li><img src="res/site/img/h4-slide2.jpg" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        by one, get one <span class="primary">50% <strong>off</strong></span>
+                        Creme Para Pentear <span class="primary">Brilho <strong>Maxímo</strong></span>
                     </h2>
-                    <h4 class="caption subtitle">school supplies & backpacks.*</h4>
+                    <h4 class="caption subtitle">Creme para penterar 1kg.*</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide3.png" alt="Slide">
+            <li><img src="res/site/img/h4-slide3.jpg" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
+                        Kit Umidificador <span class="primary">SOS <strong>Cachos</strong></span>
                     </h2>
                     <h4 class="caption subtitle">Select Item</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide4.png" alt="Slide">
+            <li><img src="res/site/img/h4-slide4.jpg" alt="Slide">
                 <div class="caption-group">
                   <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
+                        Salon Line <span class="primary">SOS <strong>Cachos</strong></span>
                     </h2>
-                    <h4 class="caption subtitle">& Phone</h4>
+                    <h4 class="caption subtitle">de Coco</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
@@ -86,91 +86,91 @@
                 <div class="product-carousel">
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-1.jpg" alt="">
+                            <img src="res/site/img/produto1.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2><a href="#">Samsung Galaxy s5- 2015</a></h2>
+                        <h2><a href="#">SOS Hidatração</a></h2>
                         
                         <div class="product-carousel-price">
-                            <ins>$700.00</ins> <del>$100.00</del>
+                            <ins>$60,00</ins> <del>$80,00</del>
                         </div> 
                     </div>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-2.jpg" alt="">
+                            <img src="res/site/img/produto2.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2>Nokia Lumia 1320</h2>
+                        <h2>SOS Óleo de Coco</h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>$16,00</ins> <del>$18,62</del>
                         </div> 
                     </div>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-3.jpg" alt="">
+                            <img src="res/site/img/produto3.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2>LG Leon 2015</h2>
+                        <h2>SOS Óleo de manga</h2>
 
                         <div class="product-carousel-price">
-                            <ins>$400.00</ins> <del>$425.00</del>
+                            <ins>$16,00</ins> <del>$18,62</del>
                         </div>                                 
                     </div>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-4.jpg" alt="">
+                            <img src="res/site/img/produto4.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2><a href="#">Sony microsoft</a></h2>
+                        <h2><a href="#">Creme Para Pentear</a></h2>
 
                         <div class="product-carousel-price">
-                            <ins>$200.00</ins> <del>$225.00</del>
+                            <ins>$19,00</ins> <del>$27,00</del>
                         </div>                            
                     </div>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-5.jpg" alt="">
+                            <img src="res/site/img/produto6.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2>iPhone 6</h2>
+                        <h2><a href="#">Secador de Cabelo 220V </a></h2>
 
                         <div class="product-carousel-price">
-                            <ins>$1200.00</ins> <del>$1355.00</del>
+                            <ins>$253,00</ins> <del>$273,00</del>
                         </div>                                 
                     </div>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/product-6.jpg" alt="">
+                            <img src="res/site/img/produto5.jpg" alt="">
                             <div class="product-hover">
                                 <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                 <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                             </div>
                         </div>
                         
-                        <h2><a href="#">Samsung gallaxy note 4</a></h2>
+                        <h2><a href="#">Creme Para Pentear Brilho Maxímo</a></h2>
 
                         <div class="product-carousel-price">
-                            <ins>$400.00</ins>
+                            <ins>$27,00</ins> <del>$27,00</del>
                         </div>                            
                     </div>
                 </div>
@@ -187,14 +187,14 @@
         <div class="col-md-12">
             <div class="brand-wrapper">
                 <div class="brand-list">
-                    <img src="res/site/img/brand1.png" alt="">
-                    <img src="res/site/img/brand2.png" alt="">
-                    <img src="res/site/img/brand3.png" alt="">
-                    <img src="res/site/img/brand4.png" alt="">
+                    <img src="res/site/img/logo1.jpg" alt="">
+                    <img src="res/site/img/logo2.jpg" alt="">
+                    <img src="res/site/img/logo3.png" alt="">
+                    <img src="res/site/img/logo4.png" alt="">
                     <img src="res/site/img/brand5.png" alt="">
                     <img src="res/site/img/brand6.png" alt="">
-                    <img src="res/site/img/brand1.png" alt="">
-                    <img src="res/site/img/brand2.png" alt="">                            
+                    <img src="res/site/img/logo1.jpg" alt="">
+                    <img src="res/site/img/logo2.jpg" alt="">                            
                 </div>
             </div>
         </div>
