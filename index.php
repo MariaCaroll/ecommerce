@@ -293,25 +293,27 @@ $app->get("/admin/categories/:idcategory", function($idcategory){
     $page = new PageAdmin();
 
     $page->setTpl("categories-update", [
-        'category'=>$category->getValues()
+		'category'=>$category->getValues()
     ]);
 });
 
 $app->post("/admin/categories/:idcategory", function($idcategory){
 
-    User::verifyLogin();
-    
-    $category = new Category();
-    
-    $category->get((int)$idcategory);
+	User::verifyLogin();
 
-    $category->setData($_POST);
+	$category = new Category();
 
-    $category->save();
+	$category->get((int)$idcategory);
 
-    header('Location: /admin/categories');
+	$category->setData($_POST);
+
+	$category->save();	
+
+	header('Location: /admin/categories');
 	exit;
+
 });
+
 $app->get("/categories/:idcategory", function($idcategory){
     $category = new Category();
 
@@ -320,7 +322,8 @@ $app->get("/categories/:idcategory", function($idcategory){
     $page = new Page();
 
     $page->setTpl("category", [
-        'category'=>$category->getValues()
+        'category'=>$category->getValues(),
+        'products'=>[]
     ]);
 
 });
