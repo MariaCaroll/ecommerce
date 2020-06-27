@@ -84,95 +84,23 @@
             <div class="latest-product">
                 <h2 class="section-title">Produtos</h2>
                 <div class="product-carousel">
+                    <?php $counter1=-1;  if( isset($products) && ( is_array($products) || $products instanceof Traversable ) && sizeof($products) ) foreach( $products as $key1 => $value1 ){ $counter1++; ?>
                     <div class="single-product">
                         <div class="product-f-image">
-                            <img src="res/site/img/produto1.jpg" alt="">
+                            <img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Comprar</a>
+                                <a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="view-details-link"><i class="fa fa-info-circle"></i> Ver Detalhes</a>
                             </div>
                         </div>
                         
-                        <h2><a href="#">SOS Hidatração</a></h2>
+                        <h2><a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></h2>
                         
                         <div class="product-carousel-price">
-                            <ins>$60,00</ins> <del>$80,00</del>
+                            <ins>R$<?php echo formatPrice($value1["vlprice"]); ?></ins>
                         </div> 
                     </div>
-                    <div class="single-product">
-                        <div class="product-f-image">
-                            <img src="res/site/img/produto2.jpg" alt="">
-                            <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
-                        </div>
-                        
-                        <h2>SOS Óleo de Coco</h2>
-                        <div class="product-carousel-price">
-                            <ins>$16,00</ins> <del>$18,62</del>
-                        </div> 
-                    </div>
-                    <div class="single-product">
-                        <div class="product-f-image">
-                            <img src="res/site/img/produto3.jpg" alt="">
-                            <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
-                        </div>
-                        
-                        <h2>SOS Óleo de manga</h2>
-
-                        <div class="product-carousel-price">
-                            <ins>$16,00</ins> <del>$18,62</del>
-                        </div>                                 
-                    </div>
-                    <div class="single-product">
-                        <div class="product-f-image">
-                            <img src="res/site/img/produto4.jpg" alt="">
-                            <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
-                        </div>
-                        
-                        <h2><a href="#">Creme Para Pentear</a></h2>
-
-                        <div class="product-carousel-price">
-                            <ins>$19,00</ins> <del>$27,00</del>
-                        </div>                            
-                    </div>
-                    <div class="single-product">
-                        <div class="product-f-image">
-                            <img src="res/site/img/produto6.jpg" alt="">
-                            <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
-                        </div>
-                        
-                        <h2><a href="#">Secador de Cabelo 220V </a></h2>
-
-                        <div class="product-carousel-price">
-                            <ins>$253,00</ins> <del>$273,00</del>
-                        </div>                                 
-                    </div>
-                    <div class="single-product">
-                        <div class="product-f-image">
-                            <img src="res/site/img/produto5.jpg" alt="">
-                            <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
-                        </div>
-                        
-                        <h2><a href="#">Creme Para Pentear Brilho Maxímo</a></h2>
-
-                        <div class="product-carousel-price">
-                            <ins>$27,00</ins> <del>$27,00</del>
-                        </div>                            
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
