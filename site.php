@@ -32,7 +32,7 @@ $app->get('/', function() {
         for ($i=1; $i <= $pagination['pages']; $i++)
         {
             array_push($pages, [
-                'link'=>'/categories/'.$category->getidcategory(). '?page=' .$i,
+                'link'=>'/categories/'.$category->getidcategory().'?page=' .$i,
                 'page'=>$i
             ]);
         }
@@ -41,10 +41,42 @@ $app->get('/', function() {
     
         $page->setTpl("category", [
             'category'=>$category->getValues(),
-            'products'=>$pagination["data"]
+            'products'=>$pagination["data"],
+            'pages'=>$pages
         ]);
     
     });
+
+    
+$app->get("/products/:desurl", function($desurl){
+
+	$product = new Product();
+
+	$product->getFromURL($desurl);
+
+	$page = new Page();
+
+	$page->setTpl("product-detail", [
+		'product'=>$product->getValues(),
+		'categories'=>$product->getCategories()
+	]);
+
+});
+
+$app->get("/cart", function(){
+
+	//$cart = Cart::getFromSession();
+
+	$page = new Page();
+
+    $page->setTpl("cart");
+	/**$page->setTpl("cart", [
+		'cart'=>$cart->getValues(),
+		'products'=>$cart->getProducts(),
+		'error'=>Cart::getMsgError()
+	]);**/
+
+});
 
 
 ?>
