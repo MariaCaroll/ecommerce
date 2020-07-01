@@ -224,11 +224,11 @@ class User extends Model
 
 				if ($inadmin === true) {
 
-					$link = "http://http://www.almecommerce.com.br//admin/forgot/reset?code=$code";
+					$link = "http://http://www.almecommerce.com.br/admin/forgot/reset?code=$code";
 
 				} else {
 
-					$link = "http://http://www.almecommerce.com.br//forgot/reset?code=$code";
+					$link = "http://http://www.almecommerce.com.br/forgot/reset?code=$code";
 					
 				}				
 

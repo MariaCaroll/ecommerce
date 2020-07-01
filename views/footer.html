@@ -5,11 +5,11 @@
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
                     <h2>Alm Cabeleira</h2>
-                    <p>Site ecommerce para fins academicos desenvolvido por 3 alunos da Fatec Itapetininga</p>
+                    <p>Site ecommerce para fins acadêmicos. Desenvolvido por 3 alunos da Fatec Itapetininga</p>
                     <div class="footer-social">
                         <a href="https://github.com/MariaCaroll" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         <a href="https://github.com/luuishr" target="_blank"><i class="fa fa-github"></i></a>
-                        <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="https://github.com/aronmomberg" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
             </div>
