@@ -78,7 +78,7 @@ class Cart extends Model {
 
 	}	
 
-	public function get(int $idcart)
+	public function get($idcart)
 	{
 
 		$sql = new Sql();
