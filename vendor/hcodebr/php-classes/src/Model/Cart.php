@@ -77,7 +77,7 @@ class Cart extends Model {
 		}
 
 	}	
-
+// se por o int da o erro 
 	public function get($idcart)
 	{
 
