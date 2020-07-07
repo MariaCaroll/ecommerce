@@ -123,6 +123,7 @@ class Cart extends Model {
 			':idproduct'=>$product->getidproduct()
 		]);
 
+	
 		$this->getCalculateTotal();
 
 	}
@@ -147,7 +148,7 @@ class Cart extends Model {
 			]);
 
 		}
-
+	
 		$this->getCalculateTotal();
 
 	}

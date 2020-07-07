@@ -1,0 +1,63 @@
+var _st_page = false;
+
+if (typeof EZCOMMERCE_SCRIPTS_OBJECT !== "undefined") {
+    if (EZCOMMERCE_SCRIPTS_OBJECT.USER.ISLOGGED === false || EZCOMMERCE_SCRIPTS_OBJECT.USER.ISLOGGED === "false") {
+        if (EZCOMMERCE_SCRIPTS_OBJECT.PRODUCT) {
+            _st_page = 'products/' + EZCOMMERCE_SCRIPTS_OBJECT.PRODUCT.CODE;
+
+        } else if (EZCOMMERCE_SCRIPTS_OBJECT.ORDER) {
+            _st_page = 'confirmation';
+
+        //PRODUCT_LIST em confirmation
+        } else if (EZCOMMERCE_SCRIPTS_OBJECT.PRODUCT_LIST) {
+            _st_page = 'cart';
+            var _st_cart = {
+                id: [],
+                qty: []
+            };
+
+            var itens = EZCOMMERCE_SCRIPTS_OBJECT.PRODUCT_LIST || [];
+            for (i = 0; i < itens.length; i++) {
+                _st_cart.id.push(itens[i].CODE.split('-')[0]);
+                _st_cart.qty.push(itens[i].QUANTITY);
+            }
+
+            if (_st_cart.id.length > 0) {
+                _st_app.send_cart(_st_cart);
+            }
+        }
+    } else {
+        _st_page = 'ignore_prods';
+    }
+} else if (typeof EzGaCfg !== "undefined") {
+    if (EzGaCfg.Shopper.IsAuthenticated === false || EzGaCfg.Shopper.IsAuthenticated === "false") {
+        if (EzGaCfg.ProductDetail) {
+            _st_page = 'products/' + EzGaCfg.ProductDetail.id;
+
+        } else if (location.href.indexOf("confirmation") > -1) {
+            _st_page = 'confirmation';
+
+            //PRODUCT_LIST em confirmation
+        } else if (location.pathname.indexOf("carrinho") > -1) {
+            _st_page = 'cart';
+            var _st_cart = {
+                id: [],
+                qty: []
+            };
+
+            var itens = EzGaCfg.Checkout.Items || [];
+            for (i = 0; i < itens.length; i++) {
+                _st_cart.id.push(itens[i].id);
+                _st_cart.qty.push(itens[i].quantity);
+            }
+
+            if (_st_cart.id.length > 0) {
+                _st_app.send_cart(_st_cart);
+            }
+        }
+    } else {
+        _st_page = 'ignore_prods';
+    }
+}
+
+_st_app.set_page(_st_page);

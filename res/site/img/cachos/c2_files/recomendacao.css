@@ -1,0 +1,881 @@
+﻿/*
+* - STRUCTURE
+* --- Na maioria das vezes não será necessário mudar daqui para abaixo
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* Loading */
+.slick-loading .slick-list {
+	background: #fff url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/ajax-loader.gif') center center no-repeat;
+}
+
+/* Fonts */
+@font-face {
+font-family: 'slick';
+font-weight: normal;
+font-style: normal;
+	src: url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.eot');
+	src: url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.woff') format('woff'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.ttf') format('truetype'), url('https://cdn.jsdelivr.net/jquery.slick/1.6.0/fonts/slick.svg#slick') format('svg');
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+#shopback.recomendacao .box {
+	background-color: #ffffff;
+	position: relative;
+}
+
+#shopback.recomendacao .recommendations {display: block;}
+
+#shopback.recomendacao .thanks {display: none;}
+
+#shopback.recomendacao .poweredby {
+	background-image: url(https://app.shopconvert.com.br/facebook/completo/assets/css/../img/powered-by-shopback.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: transparent;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	margin: 0 auto;
+	height: 25px;
+	width: 152px;
+}
+
+#shopback.vitrine .poweredby.black {
+	background-image: url('https://app.shopconvert.com.br/uploads/imagens/shopback/powered-by-shopback_b.png');
+}
+
+#shopback .loading {
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#shopback.recomendacao .close {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-size: 48px;
+	font-weight: 300;
+	height: 40px;
+	line-height: 15px;
+	padding: 6px;
+	position: absolute;
+	right: 5px;
+	text-align: center;
+	text-decoration: none;
+	top: 5px;
+	width: 40px;
+	z-index: 1000;
+}
+
+#shopback.recomendacao .close.rounded {
+	border-radius: 50%;
+}
+
+#shopback.recomendacao .close.bordered {
+	height: 44px;
+	width: 44px;
+}
+
+#shopback.recomendacao .header {
+	height: 110px;
+	overflow: hidden;
+}
+
+#shopback.recomendacao .content {
+	padding: 10px 0;
+	position: relative;
+}
+
+#shopback.recomendacao .content .carousel .slick-arrow {
+	color: rgba(0, 0, 0, 0);
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	width: 0;
+}
+
+#shopback.recomendacao .content .carousel .slick-prev::before,
+#shopback.recomendacao .content .carousel .slick-next::before {
+	opacity: 0;
+}
+
+#shopback.recomendacao .content .carousel .slick-prev {
+	border-bottom: 50px solid rgba(0, 0, 0, 0);
+	border-left-color: #000000;
+	border-right-style: solid;
+	border-right-width: 20px;
+	border-top: 50px solid rgba(0, 0, 0, 0);
+}
+
+#shopback.recomendacao .content .carousel .slick-prev.slick-disabled {
+	border-right-color: #cccccc;
+	cursor: default;
+}
+
+#shopback.recomendacao .content .carousel .slick-next {
+	border-bottom: 50px solid rgba(0, 0, 0, 0);
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 20px;
+	border-top: 50px solid rgba(0, 0, 0, 0);
+	color: rgba(0, 0, 0, 0);
+}
+
+#shopback.recomendacao .content .carousel .slick-next.slick-disabled {
+	border-left-color: #cccccc;
+	cursor: default;
+}
+
+#shopback.recomendacao .content .carousel .slick-arrow::after,
+#shopback.recomendacao .content .carousel .slick-arrow::after {
+	border-bottom: 50px solid rgba(0, 0, 0, 0);
+	border-top: 50px solid rgba(0, 0, 0, 0);
+	content: "";
+	height: 0;
+	position: absolute;
+	top: -50px;
+	width: 0;
+}
+
+#shopback.recomendacao .content .carousel .slick-prev::after {
+	border-right: 20px solid #ffffff;
+	left: 3px;
+}
+
+#shopback.recomendacao .content .carousel .slick-next::after {
+	border-left: 20px solid #ffffff;
+	left: -23px;
+}
+
+#shopback.recomendacao .content .carousel .item {display: block !important;}
+
+#shopback.recomendacao .content .carousel .item .item_border {
+	margin: 0 auto;
+	width: 95%;
+}
+
+#shopback.recomendacao .content .carousel .item .img_border {
+	margin: 0 auto 5px auto;
+	overflow: hidden;
+	padding: 5px;
+	position: relative;
+}
+
+#shopback.recomendacao .content .carousel .item .img_border img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	width: 95%;
+}
+
+#shopback.recomendacao .content .carousel .item .product_name,
+#shopback.recomendacao .content .carousel .item .product_oldPrice,
+#shopback.recomendacao .content .carousel .item .product_price,
+#shopback.recomendacao .content .carousel .item .product_instalments {
+	margin: 0 0 5px 0;
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+#shopback.recomendacao .content .carousel .item .product_name {}
+
+#shopback.recomendacao .content .carousel .item .product_oldPrice {
+	color: #a1a1a1;
+	font-size: 11px;
+	height: 12px;
+	text-decoration: line-through;
+}
+
+#shopback.recomendacao .content .carousel .item .product_price {}
+
+#shopback.recomendacao .content .carousel .item .product_instalments {
+	font-size: 12px;
+	height: 14px;
+}
+
+#shopback.recomendacao .content .carousel .item .button {
+	cursor: pointer;
+	height: 40px;
+	margin: 0 5px 5px 5px;
+}
+
+#shopback.recomendacao .content .carousel .item .button .outer {
+	float: right;
+	position: relative;
+	left: -50%;
+}
+
+#shopback.recomendacao .content .carousel .item .button .inner {
+	position: relative;
+	left: 50%;
+}
+
+#shopback.recomendacao .content .carousel .item .button .icon {
+	display: block;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+#shopback.recomendacao .content .carousel .item .button span {
+	display: block;
+	float: left;
+}
+
+#shopback.recomendacao .footer {
+	overflow: hidden;
+	width: 100%;
+}
+
+#shopback.recomendacao .footer .facebook {
+	background-color: #3961ad;
+	border-color: #2d5073;
+	border-top: 0px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 2px solid transparent;
+	border-right: 1px solid transparent;
+	box-shadow: 0 4px 0 #274c91;
+	border-radius: 5px;
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	margin: 6px auto;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
+
+#shopback.recomendacao .footer .facebook span {
+	display: block;
+	font-size: 12px;
+}
+
+/* facebook com gradient */
+#shopback.recomendacao .footer .facebook.gradient {
+	background: #567ec9; /* Old browsers */
+	background: -moz-linear-gradient(top, #567ec9 0%, #31497a 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #567ec9 0%,#31497a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #567ec9 0%,#31497a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#567ec9', endColorstr='#31497a',GradientType=0 ); /* IE6-9 */
+	box-shadow: none;
+	margin: 10px auto 0 auto;
+}
+
+#shopback.recomendacao .footer .facebook.gradient:active {
+	background: #567ec9; /* Old browsers */
+	background: -moz-linear-gradient(top, #31497a 0%, #567ec9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #31497a 0%, #567ec9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #31497a 0%, #567ec9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31497a', endColorstr='#567ec9',GradientType=0 ); /* IE6-9 */
+	margin: 14px auto;
+}
+
+#shopback.recomendacao .footer .facebook.gradient .text {
+	border-left: 1px solid #5076b5;
+	margin: 0 auto;
+	padding: 8px 0 0 15px;
+}
+
+/* hack para Google Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #shopback.recomendacao .footer .facebook.gradient .text {
+    	padding: 13px 0 0 15px;
+    }
+}
+
+#shopback.recomendacao .footer .facebook.gradient .text::before {
+	border-left: 1px solid #2b417e;
+	content: "";
+	display: block;
+	float: left;
+	height: 52px;
+	margin-left: -17px;
+	margin-top: -10px;
+}
+
+/* Logo a direita no layout de gradient */
+#shopback.recomendacao .footer .facebook.gradient.align_right .text {
+	border-left: 0;
+	border-right: 1px solid #5076b5;
+	float: right;
+	padding: 7px 10px 7px 0;
+}
+
+#shopback.recomendacao .footer .facebook.gradient.align_right .text::before {
+	float: right;
+	margin-left: 0;
+	margin-right: -12px;
+}
+
+/* facebook com fundo branco */
+#shopback.recomendacao .footer .facebook.white {
+	background: #ffffff;
+	border: 1px solid #2d5073;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#shopback.recomendacao .footer .facebook.white:active {
+	border-left: 3px solid #2d5073;
+	border-top: 3px solid #2d5073;
+	margin: 14px auto;
+}
+
+#shopback.recomendacao .footer .facebook.white .text {
+	color: #2d5073;
+	padding: 7px 0 0 20px;
+}
+
+#shopback.recomendacao .footer .facebook.white .text small {
+	color: #555555;
+}
+
+#shopback.recomendacao .footer .facebook.white .logo {
+	background-color: #395185;
+}
+
+#shopback.recomendacao .footer .facebook.white.align_right .logo {
+	margin: -1px -3px 0 0px;	
+}
+
+#shopback.recomendacao .footer .facebook.white.align_right .text {
+	padding: 7px 0 0 13px;
+}
+
+/* facebook com fundo branco gradient */
+#shopback.recomendacao .footer .facebook.gradient_white {
+	background: rgb(240,240,240);
+	background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 50%, rgba(240,240,240,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(255,255,255,1) 50%,rgba(240,240,240,1) 100%);
+	background: linear-gradient(to bottom, rgba(240,240,240,1) 0%,rgba(255,255,255,1) 50%,rgba(240,240,240,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#f1f1f1',GradientType=0 );
+	border: 0;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white:active {
+	border-left: 3px solid #2d5073;
+	border-top: 3px solid #2d5073;
+	margin: 14px auto;
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white .text {
+	color: #2d5073;	
+	padding: 12px 0 0 20px;
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white .text span {
+	font-size: 14px;
+	font-weight: 700;	
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white .text small {
+	color: #555555;
+	font-size: 8px;
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white .logo {
+	background-color: #395185;
+	border-radius: 5px;
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white.align_right .logo {
+	margin: -1px -3px 0 0px;	
+}
+
+#shopback.recomendacao .footer .facebook.gradient_white.align_right .text {
+	padding: 12px 0 0 13px;
+}
+
+/* Alinhamento do logo */
+#shopback.recomendacao .footer .facebook.align_right .logo {
+	float: right;
+	margin: 0;
+}
+
+#shopback.recomendacao .footer .facebook .logo {
+	float: left;
+	margin: -1px 0 0 -5px;
+	overflow: hidden;
+	position: relative;
+}
+
+#shopback.recomendacao .footer .facebook .text {
+	color: #ffffff;
+	display: block;
+	float: left;
+	font-family: sans-serif;
+	margin: -2px auto 0 auto;
+	text-transform: none;
+}
+
+#shopback.recomendacao .footer .facebook .text small {
+	color: #aaaaaa;
+	display: block;
+	font-size: 9px;
+}
+
+/* Layer de sucesso ao conectar no facebook */
+#shopback.recomendacao .thanks .header .store_logo {
+	float: none;
+	margin: 0 auto;
+}
+
+#shopback.recomendacao .thanks .user_image {
+	border: 2px solid #aaaaaa;
+	border-radius: 50%;
+	height: 100px;
+	margin: 30px auto 15px auto;
+	overflow: hidden;
+	width: 100px;
+}
+
+#shopback.recomendacao .thanks .user_image .border {
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	height: 96px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 96px;
+}
+
+#shopback.recomendacao .thanks .user_image img {
+	height: 100%;
+	width: 100%;
+}
+
+#shopback.recomendacao .thanks .text {
+	padding: 0 50px;
+	text-align: center;
+}
+
+#shopback.recomendacao .thanks h1 {
+	margin: 0 auto 10px auto;
+}
+
+#shopback.recomendacao .thanks h2 {
+	margin: 0 auto 20px auto;
+}
+
+#shopback.recomendacao .thanks .continue {
+	border: none;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	outline: none;
+	overflow: hidden;
+}
+
+#shopback.recomendacao .thanks .continue:active {
+	margin-top: 23px;
+}
+
+/* -------------------
+	Media Queries
+------------------- */
+@media only screen and (min-width : 320px) {
+    #shopback.recomendacao {
+    	margin: 15px auto 0 auto;
+    	width: 300px;
+    }
+
+    #shopback.recomendacao .header .store_logo {
+    	height: 50px;
+    	padding: 5px 0;
+		position: relative;
+		width: 100%;
+	}
+
+	#shopback.recomendacao .header .store_logo img {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 50px;
+		max-width: 200px;
+	}
+
+	#shopback.recomendacao .header {
+		height: 100px;
+	}
+
+	#shopback.recomendacao .header .text {
+		display: block;
+		padding: 0 20px 5px 20px;
+		text-align: center;
+	}
+
+	#shopback.recomendacao .content {
+		padding: 0 0 10px 0;
+	}
+
+	#shopback.recomendacao .content .carousel .item .img_border {
+		height: 180px;
+		width: 240px;
+	}
+
+	#shopback.recomendacao .footer {
+		height: 100px;
+	}
+
+	#shopback.recomendacao .footer .text {
+		padding: 0 20px;
+		text-align: center;
+	}
+
+	#shopback.recomendacao .footer .facebook {
+		width: 280px;
+	}
+
+	#shopback.recomendacao .footer .facebook:active {
+		box-shadow: none;
+		margin: 18px auto 10px auto;
+	}
+	
+	#shopback.recomendacao .footer .facebook .text {
+		padding: 13px 0 0 20px;
+		text-align: left;
+		width: 200px;
+	}
+
+	#shopback.recomendacao .thanks .text {
+		padding: 0 10px;
+	}
+
+	#shopback.recomendacao .thanks .text h1 {
+		font-size: 24px;
+    	line-height: 30px;
+	}
+
+	#shopback.recomendacao .thanks .text h2 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	#shopback.recomendacao .thanks .text .continue {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width : 480px) {
+    #shopback.recomendacao {
+    	margin: 15px auto 0 auto;
+    	width: 460px;
+    }
+
+    #shopback.recomendacao .box {
+    	height: 555px;
+    }
+
+    #shopback.recomendacao .header .store_logo {
+    	height: 70px;
+    	padding: 5px 0;
+		position: relative;
+		width: 100%;
+	}
+
+	#shopback.recomendacao .header .store_logo img {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 70px;
+		max-width: 300px;
+	}
+
+	#shopback.recomendacao .header .text {
+		display: block;
+		padding: 0 20px 5px 20px;
+		text-align: center;
+	}
+
+	#shopback.recomendacao .content {
+		height: 360px;
+	}
+
+	#shopback.recomendacao .content .carousel {
+		margin: 0 auto;
+		width: 440px;
+	}
+
+	#shopback.recomendacao .content .carousel .slick-arrow {
+		display: none;
+	}
+
+	#shopback.recomendacao .content .carousel .item .img_border {
+		height: 180px;
+		width: 200px;
+	}
+
+	#shopback.recomendacao .footer {
+		height: 85px;
+	}
+
+	#shopback.recomendacao .footer .text {
+		padding: 0 20px;
+		text-align: center;
+	}
+
+	#shopback.recomendacao .footer .facebook {
+		width: 280px;
+	}
+
+	#shopback.recomendacao .footer .facebook:active {
+		box-shadow: none;
+		margin: 18px auto 10px auto;
+	}
+	
+	#shopback.recomendacao .footer .facebook .text {
+		padding: 13px 0 0 20px;
+		text-align: left;
+		width: 200px;
+	}
+
+	#shopback.recomendacao .thanks .text {
+		padding: 0 10px;
+	}
+
+	#shopback.recomendacao .thanks .text h1 {
+		font-size: 30px;
+    	line-height: 36px;
+	}
+
+	#shopback.recomendacao .thanks .text h2 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	#shopback.recomendacao .thanks .text .continue {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	#shopback.recomendacao .poweredby {
+		float: left;
+		margin: auto;
+	}
+
+	#shopback.recomendacao {
+    	margin: 15px auto 0 auto;
+    	width: 748px;
+    }
+
+	#shopback.recomendacao .box {
+		height: 565px;
+	}
+
+    #shopback.recomendacao .header .text {
+		display: block;
+		float: right;
+		text-align: left;
+		padding: 30px 0 0 20px;
+		width: 520px;
+	}
+
+	#shopback.recomendacao .header .text .first {
+		display: block;
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	#shopback.recomendacao .header .text .second {
+		display: block;
+		font-size: 24px;
+	}
+
+	#shopback.recomendacao .header .store_logo {
+		float: left;
+		height: 90px;
+		position: relative;
+		width: 200px;
+	}
+
+	/* Logo posicionado a direita */
+	#shopback.recomendacao .header.right .text {
+		float: left;
+		padding: 0 0 0 50px;
+		width: 490px;
+	}
+	
+	#shopback.recomendacao .header.right .store_logo {
+		float: right;
+		padding: 0 0 0 0;
+		width: 200px;
+	}
+
+	/* Logo posicionado a esquerda */
+	#shopback.recomendacao .header.left .text {
+		float: right;
+		padding: 0 0 0 20px;
+		width: 520px;
+	}
+	
+	#shopback.recomendacao .header.left .store_logo {
+		float: left;
+		width: 200px;
+	}
+
+	/* Logo posicionado ao centro */
+	#shopback.recomendacao .header.center .text {
+		float: none;
+		margin: 5px 0 0 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+	}
+	
+	#shopback.recomendacao .header.center .text .first,
+	#shopback.recomendacao .header.center .text .second {
+		display: inline-block;
+		font-size: 18px;
+		margin: 0 5px;
+	}
+
+	#shopback.recomendacao .header.center .store_logo {
+		float: none;
+		height: auto;
+		margin: 5px 0 0 0;
+		width: 100%;
+	}
+
+	#shopback.recomendacao .header.center .store_logo img {
+		display: block;
+		left: inherit;
+		position: initial;
+		top: inherit;
+		transform: none;
+		margin: 0 auto;
+		max-height: 50px;
+	}
+
+	#shopback.recomendacao .content {
+		height: auto;
+		padding: 0;
+	}
+
+	#shopback.recomendacao .content::before {
+		content: "";
+		display: block;
+		height: 6px;
+		margin: 0 auto;
+		width: 70%;
+		border-radius: 100%;
+		background: #cccccc; /* Old browsers */
+		background: -moz-linear-gradient(bottom,  #cccccc 0%, #ffffff 96%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(bottom,  #cccccc 0%,#ffffff 96%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to top,  #cccccc 0%,#ffffff 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+	}
+
+    #shopback.recomendacao .content .carousel {
+		margin: 0 auto;
+		padding: 5px 0;
+		width: 668px;
+	}
+
+	#shopback.recomendacao .content .slick-list {
+		height: 370px;
+	}
+
+	#shopback.recomendacao .content .carousel .slick-arrow {
+		display: none;
+	}
+
+	#shopback.recomendacao .content .carousel .item .img_border {
+		height: 195px;
+		width: 195px;
+	}
+
+	#shopback.recomendacao .footer {
+		height: 85px;
+	}
+
+	#shopback.recomendacao .footer::before {
+		content: "";
+		display: block;
+		height: 6px;
+		margin: 0 auto;
+		width: 70%;
+		border-radius: 100%;
+		background: #cccccc; /* Old browsers */
+		background: -moz-linear-gradient(top,  #cccccc 0%, #ffffff 96%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #cccccc 0%,#ffffff 96%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	}
+
+	#shopback.recomendacao .footer .left,
+	#shopback.recomendacao .footer .right {
+		float: left;
+		width: 370px;
+	}
+
+	#shopback.recomendacao .footer .left .text {
+		margin: 17px auto 0 auto;
+	}
+}
+
+@media only screen and (min-width : 992px) {
+	#shopback.recomendacao {
+		height: 620px;
+		left: 50%;
+		margin-left: -400px;
+		margin-top: -310px;
+		position: fixed;
+		top: 50%;
+		width: 800px;
+	}
+
+	#shopback.recomendacao .box {
+		height: 600px;
+		margin: 0 auto;
+		overflow: hidden;
+		width: 800px;
+	}
+
+	#shopback.recomendacao .content {
+		height: 415px;
+	}
+
+	#shopback.recomendacao .content .carousel {
+		margin: 0 auto;
+		padding: 10px 0 0 0;
+		width: 740px;
+	}
+
+	#shopback.recomendacao .footer .left,
+	#shopback.recomendacao .footer .right {
+		float: left;
+		width: 400px;
+	}
+}
+
+@media only screen and (min-width : 1200px) {}
