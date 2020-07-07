@@ -61,29 +61,33 @@ class User extends Model
     public static function login($login, $password)
     {
         $sql = new Sql();
-        $results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
-            ":LOGIN"=>$login
-        ));
 
-        if(count($results) === 0)
-        {
-            throw new \Exception(("Usuário ou senha inválida!"));
-        }
-        $data = $results[0];
+		$results = $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b ON a.idperson = b.idperson WHERE a.deslogin = :LOGIN", array(
+			":LOGIN"=>$login
+		)); 
 
-        if (password_verify($password, $data["despassword"]) === true)
-        {
-            $user = new User();
+		if (count($results) === 0)
+		{
+			throw new \Exception("Usuário inexistente ou senha inválida.");
+		}
+
+		$data = $results[0];
+
+		if (password_verify($password, $data["despassword"]) === true)
+		{
+
+			$user = new User();
 
 			$data['desperson'] = utf8_encode($data['desperson']);
 
-            $user->setData($data);
+			$user->setData($data);
 
-            $_SESSION[User::SESSION] = $user->getValues();
-            
-            return $user;
-        } else {
-            throw new \Exception("Usuário ou senha inválida!");
+			$_SESSION[User::SESSION] = $user->getValues();
+
+			return $user;
+
+		} else {
+			throw new \Exception("Usuário inexistente ou senha inválida.");
         }
     }
     public static function verifyLogin($inadmin = true)
@@ -366,6 +370,20 @@ class User extends Model
 		$_SESSION[User::ERROR_REGISTER] = NULL;
 
 	}
+	
+	public static function checkLoginExist($login)
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :deslogin", [
+			':deslogin'=>$login
+		]);
+
+		return (count($results) > 0);
+
+	}
+
 
 }
 ?>
