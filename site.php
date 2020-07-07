@@ -141,13 +141,6 @@ $app->post("/cart/freight", function(){
 
 });
 
-$app->get("/forgot", function() {
-
-	$page = new Page();
-
-	$page->setTpl("forgot");	
-
-});
 
 $app->get("/checkout", function(){
 
@@ -234,16 +227,6 @@ $app->get("/logout", function(){
 
 });
 
-$app->post("/forgot", function(){
-
-	$user = User::getForgot($_POST["email"], false);
-
-	header("Location: /forgot/sent");
-	exit;
-
-});
-
-
 $app->post("/register", function(){
 
 	$_SESSION['registerValues'] = $_POST;
@@ -300,6 +283,23 @@ $app->post("/register", function(){
 
 });
 
+$app->get("/forgot", function() {
+
+	$page = new Page();
+
+	$page->setTpl("forgot");	
+
+});
+
+$app->post("/forgot", function(){
+
+	$user = User::getForgot($_POST["email"], false);
+
+	header("Location: /forgot/sent");
+	exit;
+
+});
+
 $app->get("/forgot/sent", function(){
 
 	$page = new Page();
@@ -341,8 +341,6 @@ $app->post("/forgot/reset", function(){
 	$page->setTpl("forgot-reset-success");
 
 });
-
-
 
 
  ?>
