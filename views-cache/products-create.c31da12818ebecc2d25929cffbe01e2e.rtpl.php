@@ -35,15 +35,15 @@
             </div>
             <div class="form-group">
               <label for="vlwidth">Largura</label>
-              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.02">
+              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="10">
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
-              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.09">
+              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="25,10">
             </div>
             <div class="form-group">
               <label for="vllength">Comprimento</label>
-              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.65">
+              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder=15">
             </div>
             <div class="form-group">
               <label for="vlweight">Peso</label>

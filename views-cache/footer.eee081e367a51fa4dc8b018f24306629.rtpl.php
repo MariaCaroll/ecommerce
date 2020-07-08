@@ -18,9 +18,9 @@
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">Navegação </h2>
                     <ul>
-                        <li><a href="#">Minha Conta</a></li>
-                        <li><a href="#">Meus Pedidos</a></li>
-                        <li><a href="#">Lista de Desejos</a></li>
+                        <li><a href="/profile">Minha Conta</a></li>
+                        <li><a href="/profile/orders">Meus Pedidos</a></li>
+
                     </ul>                        
                 </div>
             </div>
@@ -30,6 +30,7 @@
                     <h2 class="footer-wid-title">Categorias</h2>
                     <ul>
                         <?php require $this->checkTemplate("categories-menu");?>
+
                     </ul>                        
                 </div>
             </div>
